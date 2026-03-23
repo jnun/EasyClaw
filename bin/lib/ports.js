@@ -34,10 +34,10 @@ function parsePort(envVar, fallback) {
 
 /** @type {number} Dashboard UI port (default 18789, override via NEMOCLAW_DASHBOARD_PORT). */
 const DASHBOARD_PORT = parsePort("NEMOCLAW_DASHBOARD_PORT", 18789);
-/** @type {number} OpenShell gateway port (default 8081, override via NEMOCLAW_GATEWAY_PORT). */
-const GATEWAY_PORT = parsePort("NEMOCLAW_GATEWAY_PORT", 8081);
-/** @type {number} vLLM inference port (default 8009, override via NEMOCLAW_VLLM_PORT). */
-const VLLM_PORT = parsePort("NEMOCLAW_VLLM_PORT", 8009);
+/** @type {number} OpenShell gateway port (default 8080, override via NEMOCLAW_GATEWAY_PORT). */
+const GATEWAY_PORT = parsePort("NEMOCLAW_GATEWAY_PORT", 8080);
+/** @type {number} vLLM inference port (default 8000, override via NEMOCLAW_VLLM_PORT). */
+const VLLM_PORT = parsePort("NEMOCLAW_VLLM_PORT", 8000);
 /** @type {number} Ollama inference port (default 11434, override via NEMOCLAW_OLLAMA_PORT). */
 const OLLAMA_PORT = parsePort("NEMOCLAW_OLLAMA_PORT", 11434);
 

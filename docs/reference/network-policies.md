@@ -89,7 +89,7 @@ The following endpoint groups are allowed by default:
 * - `npm_registry`
   - `registry.npmjs.org:443`
   - `/usr/local/bin/openclaw`, `/usr/local/bin/npm`, `/usr/local/bin/node`
-  - All methods, all paths
+  - All methods, all paths *(upstream: GET only; widened for EasyClaw npm workflows — may be excessive, revisit)*
 
 * - `telegram`
   - `api.telegram.org:443`

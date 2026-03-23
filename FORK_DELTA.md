@@ -27,5 +27,5 @@ conflict during upstream syncs and need manual reconciliation.
 | `bin/lib/nim.js` | vLLM port from `ports.js` |
 | `bin/lib/preflight.js` | Dashboard port from `ports.js` |
 | `test/local-inference.test.js` | Port expectations match new defaults |
-| `docs/reference/network-policies.md` | Added node binary to npm policy docs |
+| `docs/reference/network-policies.md` | Added node binary to npm policy; widened to all methods/paths (may be excessive) |
 | `nemoclaw-blueprint/policies/openclaw-sandbox.yaml` | Added node binary to npm policy |
