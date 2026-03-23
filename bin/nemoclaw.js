@@ -7,6 +7,9 @@ const path = require("path");
 const fs = require("fs");
 const os = require("os");
 
+// Load .env before anything reads process.env (must precede ./lib/ports)
+require("./lib/env");
+
 // ---------------------------------------------------------------------------
 // Color / style — respects NO_COLOR and non-TTY environments.
 // Uses exact NVIDIA green #76B900 on truecolor terminals; 256-color otherwise.
