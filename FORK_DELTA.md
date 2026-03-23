@@ -1,19 +1,31 @@
 # EasyClaw Fork Delta
 
-Files unique to this fork that do not exist in upstream NVIDIA/NemoClaw.
-These need attention during upstream syncs only if upstream introduces a
-file with the same name.
+## Fork-only files
+
+Files that do not exist in upstream NVIDIA/NemoClaw. These only need
+attention if upstream introduces a file with the same name.
 
 | File | Purpose |
 |------|---------|
-| `QUICKSTART.md` | Simplified getting-started guide for EasyClaw |
 | `FORK_DELTA.md` | This file — fork delta tracker |
+| `QUICKSTART.md` | Simplified getting-started guide for EasyClaw |
 | `.env.example` | Port configuration template |
 | `bin/lib/env.js` | .env/.env.local loader for Node entry points |
 | `bin/lib/ports.js` | Central port configuration with env var overrides |
-| `scripts/check-ports.sh` | Port conflict diagnostic script |
-| `docs/reference/port-configuration.md` | Port configuration reference |
-| `test/env.test.js` | Tests for the env loader |
 
-All other files are synced from upstream via `git merge` and do not
-require manual reconciliation.
+## Modified upstream files
+
+Files that exist upstream and carry EasyClaw changes. These will
+conflict during upstream syncs and need manual reconciliation.
+
+| File | Change |
+|------|--------|
+| `.gitignore` | Added `!.env.example` exception |
+| `bin/nemoclaw.js` | Loads `env.js`; uses `DASHBOARD_PORT` from `ports.js` |
+| `bin/lib/onboard.js` | All hardcoded ports replaced with `ports.js` constants |
+| `bin/lib/local-inference.js` | vLLM/Ollama ports from `ports.js` |
+| `bin/lib/nim.js` | vLLM port from `ports.js` |
+| `bin/lib/preflight.js` | Dashboard port from `ports.js` |
+| `test/local-inference.test.js` | Port expectations match new defaults |
+| `docs/reference/network-policies.md` | Added node binary to npm policy docs |
+| `nemoclaw-blueprint/policies/openclaw-sandbox.yaml` | Added node binary to npm policy |
