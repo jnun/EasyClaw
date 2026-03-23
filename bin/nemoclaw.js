@@ -2,6 +2,9 @@
 // SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
 // SPDX-License-Identifier: Apache-2.0
 
+// Load .env files before any module reads process.env
+require("./lib/env");
+
 const { execFileSync, spawnSync } = require("child_process");
 const path = require("path");
 const fs = require("fs");
