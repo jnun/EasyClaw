@@ -20,7 +20,7 @@ import {
 
 describe("local inference helpers", () => {
   it("returns the expected base URL for vllm-local", () => {
-    expect(getLocalProviderBaseUrl("vllm-local")).toBe("http://host.openshell.internal:8000/v1");
+    expect(getLocalProviderBaseUrl("vllm-local")).toBe("http://host.openshell.internal:8009/v1");
   });
 
   it("returns the expected base URL for ollama-local", () => {
@@ -67,7 +67,7 @@ describe("local inference helpers", () => {
   it("returns a clear error when vllm-local is unavailable", () => {
     const result = validateLocalProvider("vllm-local", () => "");
     expect(result.ok).toBe(false);
-    expect(result.message).toMatch(/http:\/\/localhost:8000/);
+    expect(result.message).toMatch(/http:\/\/localhost:8009/);
   });
 
   it("parses model names from ollama list output", () => {

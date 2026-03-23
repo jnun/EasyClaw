@@ -27,9 +27,9 @@ $ $EDITOR .env
 
 | Port | Default | Env var | Common conflicts |
 |------|---------|---------|-----------------|
-| Gateway | 8080 | `NEMOCLAW_GATEWAY_PORT` | Jenkins, Tomcat, K8s |
+| Gateway | 8081 | `NEMOCLAW_GATEWAY_PORT` | Jenkins, Tomcat, K8s |
 | Dashboard | 18789 | `NEMOCLAW_DASHBOARD_PORT` | SSH forwards |
-| vLLM/NIM | 8000 | `NEMOCLAW_VLLM_PORT` | Django, PHP |
+| vLLM/NIM | 8009 | `NEMOCLAW_VLLM_PORT` | Django, PHP |
 | Ollama | 11434 | `NEMOCLAW_OLLAMA_PORT` | — |
 
 Check what's in use:
